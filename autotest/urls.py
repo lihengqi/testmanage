@@ -15,12 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from djangotest import views
-from apitest import views as views_api
+# from djangotest import views
+from autotest import view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('test/', views_api.test),
-    path("django/", views.djangotest),
-    path("login/", views_api.login),
+    # path('test/', views_api.test),
+    # path("django/", views.djangotest),
+    path("login", view.login),
 ]
