@@ -17,10 +17,17 @@ from django.contrib import admin
 from django.urls import path
 # from djangotest import views
 from autotest import view
+from product import product_views
+from apitest import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('test/', views_api.test),
     # path("django/", views.djangotest),
     path("login", view.login),
+    path("home/", view.home),
+    path("logout/", view.logout),
+    path("product_manage/", product_views.product_manage),
+    path("apitest_manage", views.apitest_manage),
+    path("apistep_manage", views.apistep_manage),
 ]
