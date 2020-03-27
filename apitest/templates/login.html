@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8"/>
+
 <head>
     <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8"/>
-    <title>Login</title>
+    <title>autotestplat</title>
+    <style> body{text-align: center}</style>
 </head>
 <body>
-<h1>login</h1>
-<form method="post" action="/login/">
+<div>
+    <font size="1">
+        <h1>登录</h1>
+    </font>
+<form method="post" action="/login">
     {% csrf_token %}
-    <br> <input name="username" type="text" placeholder="username">
-    <br> <input name="password" type="password" placeholder="password">
+    <br><a>&nbsp;&nbsp;用户名</a> <input name="username" type="text" placeholder="username">
+    <br><br><a>&nbsp;&nbsp;密&nbsp;&nbsp;码 </a><input name="password" type="password" placeholder="password">
+    <br><br>
     {{ error }} <br>
-    <br> <button id="submit" type="submit">submit</button>
+    <br>
+    <button style="width:220px;height: 28px" id="submit" type="submit" >登录</button>
 </form>
+</div>
 </body>
 </html>
