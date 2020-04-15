@@ -19,6 +19,7 @@ from django.urls import path
 from autotest import view
 from product import product_views
 from apitest import views
+from bug import views as bug_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,7 +28,9 @@ urlpatterns = [
     path("login", view.login),
     path("home/", view.home),
     path("logout/", view.logout),
-    path("product_manage/", product_views.product_manage),
+    path("product_manage", product_views.product_manage),
     path("apitest_manage", views.apitest_manage),
     path("apistep_manage", views.apistep_manage),
+    path("apis_manage", views.apis_manage),
+    path("bug_manage", bug_views.bug_manage),
 ]

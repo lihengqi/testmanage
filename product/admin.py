@@ -9,7 +9,7 @@ class ApisAdmin(admin.TabularInline):
     extra = 1
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ["productname", "productdesc", "create_tiem", "id"]
+    list_display = ["productname", "productdesc", "create_item", "id"]
 
 admin.site.register(Product)
 
