@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'apitest',
     "product",
     "bootstrap4",
-    "bug"
+    "bug",
+    "set"
 ]
 
 MIDDLEWARE = [

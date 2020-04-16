@@ -20,6 +20,7 @@ from autotest import view
 from product import product_views
 from apitest import views
 from bug import views as bug_views
+from set import views as set_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -33,4 +34,6 @@ urlpatterns = [
     path("apistep_manage", views.apistep_manage),
     path("apis_manage", views.apis_manage),
     path("bug_manage", bug_views.bug_manage),
+    path("set_manage", set_views.set_manage),
+    path("user", set_views.set_user)
 ]
