@@ -21,6 +21,7 @@ from product import product_views
 from apitest import views
 from bug import views as bug_views
 from set import views as set_views
+from apptest import views as apptest_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -35,5 +36,7 @@ urlpatterns = [
     path("apis_manage", views.apis_manage),
     path("bug_manage", bug_views.bug_manage),
     path("set_manage", set_views.set_manage),
-    path("user", set_views.set_user)
+    path("user", set_views.set_user),
+    path("appcase_manage", apptest_views.appcase_manage),
+    path("appcasestep_manage", apptest_views.appcasestep_manage)
 ]

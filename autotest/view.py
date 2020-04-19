@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse,HttpResponseRedirect
-from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
 from django.contrib import auth
+from help_function.log_print import log_write
 
 
 def login(request):
@@ -13,7 +13,9 @@ def login(request):
         if user is not None and user.is_active:
             auth.login(request, user)
             request.session["user"] = username
+
             response = HttpResponseRedirect("/home/")
+            log_write('这是个debug消息')
             # response = HttpResponseRedirect("http://www.baidu.com")
             return response
         else:

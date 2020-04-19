@@ -4,7 +4,7 @@ from product.models import Product
 # Create your models here.
 
 class Bug(models.Model):
-    Product = models.ForeignKey('product.Product', on_delete=models.CASCADE,null=True)             # 外键 产品id
+    Product = models.ForeignKey('product.Product', on_delete=models.CASCADE, null=True)             # 外键 产品id
     bugname = models.CharField("bug名称", max_length=64)                                           # bug名称
     bugdetail = models.CharField("bug描述", max_length=200)                                        # 详情
     BUG_STATUS = (("激活", "激活"), ("已解决", "已解决"), ("已关闭", "已关闭"))                      # bug状态
